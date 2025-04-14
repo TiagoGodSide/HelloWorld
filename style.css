@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    background-color: rgb(204, 212, 212);
+}
+header{
+    color: red;
+    background-color: rgb(233, 210, 180);
+    padding: 10px;
+    text-align: center;
+}
+.bradesco p{
+    background-color: red;
+    padding: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+.bradesco h2{
+    text-align: center;
+    background-color: rgb(200, 201, 200);
+    padding: 50px;
+}
+.bradesco img{
+margin-left: 600px;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
