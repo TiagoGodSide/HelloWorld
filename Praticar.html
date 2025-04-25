@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <script>
+        let produtos = [
+            { nome: "Camiseta", preco: 45 },
+            { nome: "Tenis", preco: 150},
+            { nome: "Calça", preco: 80},
+            { nome: "Boné", preco: 20}
+        ];
+            for(let i = 0; i < produtos.length; i++){
+                if(produtos[i].preco > 50){
+                    console.log(produtos[i].nome);
+                }
+            }
+    </script>
+</body>
+</html>
