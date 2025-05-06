@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividir conta</title>
+</head>
+<body>
+    
+
+    <script>
+        function divisaoDaConta(valordaconta,amigos){
+            if (amigos == 0) return "Valor inválido"
+            return valordaconta / amigos;
+        }
+        let totaldaconta = parseInt(prompt("Valor da conta"));
+        let totaldeamigos = parseInt(prompt("Quantidade de amigos"));
+        console.log(divisaoDaConta(totaldaconta,totaldeamigos))
+
+    </script>
+</body>
+</html>
