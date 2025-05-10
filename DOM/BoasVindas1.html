@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+</head>
+<body>
+    <h1>Site do DOM</h1>
+    <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
+    <button onclick="mostrarBoasVindas()">Bem vindo</button>
+    <p id="mensagemBoasVindas"></p>
+    
+    <script>
+        function mostrarBoasVindas(){
+            let nome = document.getElementById('nomeUsuario').value
+            let mensagem = document.getElementById('mensagemBoasVindas')
+            mensagem.textContent = 'Bem-Vindo ilusório do DOM, ' + nome + '.';
+        }
+    </script>
+</body>
+</html>

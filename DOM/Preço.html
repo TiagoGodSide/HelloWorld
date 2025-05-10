@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar preço</title>
+</head>
+<body>
+    <h1>Selecione uma cor</h1>
+        <select id = "produtos" onchange="atualizaPreco()">
+                <option value="50">Branco - R$50</option>
+                <option value="60">Preto - R$60</option>
+                <option value="70">Azul - R$70</option>
+                <option value="80">Rosa - R$80</option>
+        </select>
+        
+            <p>Você selecionou -> R$ <span id = "resultadoPreco">50</span>,00</p>
+
+            <script>
+                function atualizaPreco(){
+                    let valor = document.getElementById('produtos').value
+                    let preco = document.getElementById('resultadoPreco')
+                    preco.textContent = valor;
+                }
+            </script>
+        
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarme inteligente</title>
+</head>
+<body>
+    <script>
+        let hora = parseInt(prompt("Digite a hora que você está indo dormir"));
+            function alarmeInteligente(horariodedormir){
+            return(hora + 8) % 24;
+        }
+            if (hora >= 0 && hora <= 23){
+                let horaDespertar = alarmeInteligente(hora);
+                alert("Você deve acordar às " + horaDespertar  + " horas.");
+            }else{
+            alert("Por favor, insira uma hora válida");
+                    }
+                
+    </script>
+</body>
+</html>

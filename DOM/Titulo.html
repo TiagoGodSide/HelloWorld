@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da página</title>
+</head>
+<body>
+    <h1 id="titulo">Página de testes</h1>
+    <button id="mudar" onclick="mudarTitulo()">Clique aqui</button>
+    <script>
+        function mudarTitulo(){
+            let tituloNovo = "Novo título da postagem!";
+           let primeiro = document.getElementById('titulo');
+            primeiro.textContent = tituloNovo;
+            
+            }
+    </script>
+
+
+
+</body>
+</html>

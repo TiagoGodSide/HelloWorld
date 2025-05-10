@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas vindas</title>
+</head>
+<body>
+    <h3>Bem vindo, <span id="usuario"></span>!</h3>
+    <button id="nome" onclick="mudarNome()">Clique aqui!</button>
+    <script>
+       let nomeUsuario = prompt('Digite seu nome')
+        function mudarNome(){
+            let usuario = document.getElementById('usuario')
+            usuario.textContent = nomeUsuario;
+        }
+    </script>
+</body>
+</html>

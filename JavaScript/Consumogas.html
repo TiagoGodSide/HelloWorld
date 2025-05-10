@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumo Gasolina</title>
+    <title>ConsumoGas</title>
 </head>
 <body>
     
+
     <script>
 
+        let distância = parseFloat(prompt("Digite a distância"));
+        let consumo = parseFloat(prompt("Digete o consumo de gasilina"))
         function mediaDeConsumo(distância,litros){
             return distância / litros;
         }
-        let distânciaEmKm = parseInt(prompt("Distância em km"));
-        let gasolina = parseInt(prompt("Gasolina em litros"));
-        console.log(mediaDeConsumo(distânciaEmKm,gasolina))
-    </script>
+        
 
+    </script>
 </body>
 </html>
