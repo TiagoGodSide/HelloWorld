@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado</title>
+</head>
+<body>
+    <h2>Pressione uma tecla</h2>
+    <input type="text" id="campoTeclado" placeholder="Pressione uma tecla">
+    <p id="teclaPressionada"></p>
+
+    <script>
+        let campoTeclado = document.getElementById("campoTeclado");
+        let teclaPressionada = document.getElementById("teclaPressionada");
+
+        campoTeclado.addEventListener("keydown", function(event) {
+            teclaPressionada.textContent = "Tecla pressionada: " + event.key;
+        });
+    </script>
+</body>
+</html>

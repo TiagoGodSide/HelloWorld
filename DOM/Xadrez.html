@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Xadrez</title>
+    <style>
+        .tabuleiro {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 2px solid #333;
+            width: 400px;
+            height: 400px;
+        }
+        .casa {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .clara {
+            background: #f0d9b5;
+        }
+        .escura {
+            background: #b58863;
+        }
+        .selecionada {
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Jogo de Xadrez</h2>
+    <div class="tabuleiro" id="tabuleiro"></div>
+    <script>
+        // Peças em Unicode
+        const pecas = {
+            'r': '♜', 'n': '♞', 'b': '♝', 'q': '♛', 'k': '♚', 'p': '♟',
+            'R': '♖', 'N': '♘', 'B': '♗', 'Q': '♕', 'K': '♔', 'P': '♙', '': ''
+        };
+
+        // Posição inicial
+        let posicao = [
+            ['r','n','b','q','k','b','n','r'],
+            ['p','p','p','p','p','p','p','p'],
+            ['','','','','','','',''],
+            ['','','','','','','',''],
+            ['','','','','','','',''],
+            ['','','','','','','',''],
+            ['P','P','P','P','P','P','P','P'],
+            ['R','N','B','Q','K','B','N','R']
+        ];
+
+        let selecionada = null;
+
+        function desenharTabuleiro() {
+            const tabuleiro = document.getElementById('tabuleiro');
+            tabuleiro.innerHTML = '';
+            for (let linha = 0; linha < 8; linha++) {
+                for (let coluna = 0; coluna < 8; coluna++) {
+                    const casa = document.createElement('div');
+                    casa.classList.add('casa');
+                    casa.classList.add((linha + coluna) % 2 === 0 ? 'clara' : 'escura');
+                    casa.dataset.linha = linha;
+                    casa.dataset.coluna = coluna;
+                    casa.textContent = pecas[posicao[linha][coluna]];
+                    if (selecionada && selecionada[0] == linha && selecionada[1] == coluna) {
+                        casa.classList.add('selecionada');
+                    }
+                    casa.onclick = () => aoClicarCasa(linha, coluna);
+                    tabuleiro.appendChild(casa);
+                }
+            }
+        }
+
+        function aoClicarCasa(linha, coluna) {
+            if (selecionada) {
+                // Move a peça
+                posicao[linha][coluna] = posicao[selecionada[0]][selecionada[1]];
+                posicao[selecionada[0]][selecionada[1]] = '';
+                selecionada = null;
+                desenharTabuleiro();
+            } else if (posicao[linha][coluna] !== '') {
+                // Seleciona a peça
+                selecionada = [linha, coluna];
+                desenharTabuleiro();
+            }
+        }
+
+        desenharTabuleiro();
+    </script>
+</body>
+</html>

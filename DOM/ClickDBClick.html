@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click e duplo click</title>
+</head>
+<body>
+    <button id="clickDbl">Clique ou duplo clique</button>
+    <script>
+        let click = document.getElementById('clickDbl');
+
+        click.addEventListener('click', function() {
+            alert('Você clicou uma vez!');
+        });
+
+        click.addEventListener('dblclick', function() {
+            alert('Você deu um duplo clique!');
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        #fundo{
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            font-size: 100px;
+        }
+    </Style>
+</head>
+<body>
+    <div id="fundo">
+        fundo
+    </div>
+    <button onclick="mudarCorFundo()" id="mudaCor">Mudar de cor</button>
+    <script>
+        function mudarCorFundo(){
+            let corFundo = document.getElementById("fundo")
+            corFundo.style.backgroundColor = "black"
+        }
+    </script>
+</body>
+</html>
