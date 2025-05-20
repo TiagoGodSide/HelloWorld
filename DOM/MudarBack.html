@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar background</title>
+    
+</head>
+<body id="backColor">
+    <button id="ligarCor">Cor</button>
+    <script>
+        let corOn = document.getElementById('ligarCor');
+
+        addEventListener('click', function() {
+            let corFundo = document.getElementById('backColor');
+            corFundo.style.backgroundColor = "black";
+        });
+        addEventListener('dblclick', function() {
+            let corFundo = document.getElementById('backColor');
+            corFundo.style.backgroundColor = "green";
+        });
+    </script>
+</body>
+</html>

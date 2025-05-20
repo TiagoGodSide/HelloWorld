@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticar</title>
+    <style>
+        #campo {
+            width: 150px;
+            height: 150px;
+            border: 5px, solid black;
+            position: center;
+            background-color: white;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="campo">
+        
+    </div>
+    <script>
+       let quadrado = document.getElementById('campo');
+        quadrado.addEventListener("mouseover", function(){
+            campo.style.backgroundColor = "orange";
+        })   
+        let campo = document.getElementById('campo');
+        quadrado.addEventListener("mouseout", function(){
+            campo.style.backgroundColor = "red";
+        })   
+    </script>
+</body>
+</html>

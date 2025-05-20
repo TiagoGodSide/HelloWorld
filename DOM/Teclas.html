@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de teclas</title>
+</head>
+<body>
+    <input type="text" id="campoTexto" placeholder="Digite algo aqui...">
+    <p id="contador">Teclas pressionadas: 0</p>
+
+    <script>
+        let campoTextoReal = document.getElementById('campoTexto');
+        let contadorReal = document.getElementById('contador');
+
+        let armazenarContador = 0;
+        campoTextoReal.addEventListener("keydown", function(){
+            armazenarContador++;
+            contadorReal.textContent= "Teclas pressionadas: " + armazenarContador;
+        })
+    </script>
+</body>
+</html>
