@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Timer de Cozinha</h1>
+    <div id="timer">
+        <p id="tempo">00:00</p>
+        <button id="iniciar">Iniciar</button>
+        <button id="parar">Parar</button>
+        <button id="resetar">Resetar</button>
+    </div>
+
+    <script>
+        let tempo = 0;
+        let intervalo;
+
+        function atualizarTempo() {
+            const minutos = Math.floor(tempo / 60);
+            const segundos = tempo % 60;
+            document.getElementById('tempo').textContent = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+        }
+
+        document.getElementById('iniciar').addEventListener('click', () => {
+            if (!intervalo) {
+                intervalo = setInterval(() => {
+                    tempo++;
+                    atualizarTempo();
+                }, 1000);
+            }
+        });
+
+        document.getElementById('parar').addEventListener('click', () => {
+            clearInterval(intervalo);
+            intervalo = null;
+        });
+
+        document.getElementById('resetar').addEventListener('click', () => {
+            clearInterval(intervalo);
+            intervalo = null;
+            tempo = 0;
+            atualizarTempo();
+        });
+    </script>
+
+</body>
+</html>

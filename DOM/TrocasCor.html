@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar cores</title>
+    <style>
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Este exercício altera a cor do fundo</h1>
+    
+    
+    <script>
+        let trocas = 0
+
+        let intervalo = setInterval(()=>{
+            if(document.body.style.backgroundColor === 'blue'){
+                document.body.style.backgroundColor = 'black';
+            
+            }else{
+                document.body.style.backgroundColor = 'blue';
+            }
+            trocas++
+            if(trocas >= 10){
+                clearInterval(intervalo)
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

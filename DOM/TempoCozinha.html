@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer de Cozinha</title>
+</head>
+<body>
+    <h1>Timer de Cozinha: <span id="contador">0</span> </h1>
+
+    <script>
+        let contador = prompt("Digite o número inicial do contador: ");
+        contador = parseInt(contador);
+        let intervalo = setInterval(() =>{
+           document.getElementById("contador").textContent = contador
+           contador--
+           if(contador < 0){
+            clearInterval(intervalo)
+            alert("Tempo esgotado!")
+           }
+
+        },1000)
+        
+    </script>
+</body>
+</html>
