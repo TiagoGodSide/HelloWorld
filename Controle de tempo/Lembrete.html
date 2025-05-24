@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarme</title>
+</head>
+<body>
+    <h2>Alarme</h2>
+    <p id="mensagem"></p>
+    <button id="botao">Lembrar compromisso</button>
+
+    <script>
+        let contador = 1
+        document.getElementById("botao").addEventListener("click", () =>{
+            let intervalo = setInterval(() =>{
+                document.getElementById("mensagem").textContent = contador
+                contador++
+                if(contador >= 5){
+                    clearInterval(intervalo)
+                }
+            },1000)
+            setTimeout(() =>{
+                document.getElementById("mensagem").textContent = "Não se esqueça do seu compromisso!"
+            }, 5000)
+        })
+
+    </script>
+</body>
+</html>

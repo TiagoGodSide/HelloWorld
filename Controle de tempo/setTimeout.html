@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Exercício da mensagem com atraso</h1>
+    <button id="botao">Here</button>
+    <p id="mensagem"></p>
+
+    <script>
+
+        document.getElementById("botao").addEventListener("click", () => {
+            setTimeout(() => {
+                document.getElementById("mensagem").textContent = "Passou 3 segundos"
+            }, 3000)
+        })
+
+    </script>
+
+</body>
+</html>

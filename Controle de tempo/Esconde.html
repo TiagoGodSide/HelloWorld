@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Desaparecer no botão</h1>
+    <button id="botao">Desaparecer</button>
+    <p id="texto"> O meu texto já está aparecendo!</p>
+
+    <script>
+
+        document.getElementById("botao").addEventListener("click", () =>{
+            setTimeout(() =>{
+                document.getElementById("texto").style.display = "none"
+            },5000)
+        })
+
+    </script>
+
+</body>
+</html>
