@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <link rel="stylesheet" href="semaforo.css">
+</head>
+<body>
+    
+    <div class="semaforo">
+        <div id="vermelho" class="luz"></div>
+        <div id="amarelo" class="luz"></div>
+        <div id="verde" class="luz"></div>
+    </div>
+    <button id="btn-iniciar">Iniciar</button>
+
+    <script>
+        const luzvermelha = document.getElementById("vermelho");
+        const luzamarela = document.getElementById("amarelo");
+        const luzverde  = document.getElementById("verde");
+
+        function apagarTodas(){
+            luzvermelha.className = "luz";
+            luzamarela.className = "luz";   
+            luzverde.className = "luz";
+        }
+        document.getElementById("btn-iniciar").addEventListener("click", () =>{
+            apagarTodas();
+            luzverde.classList.add("verde");
+            setTimeout(()=>{
+                apagarTodas();
+                luzamarela.classList.add("amarelo")
+            },2000)
+
+            setTimeout(()=>{
+                apagarTodas();
+                luzvermelha.classList.add("vermelho");
+            },4000) 
+            
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.semaforo{
+    width: 60px;
+    height: 180px;
+    background-color: #333; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.luz{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #afa5a5;
+    margin: auto;
+}
+.vermelho{
+    background: #ff0000;
+}
+.amarelo{
+    background: #ffff00;
+}
+.verde{
+    background: #00ff00;
+}
+button{
+    margin-top: 20px;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}

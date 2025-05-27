@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+   <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        div {
+            width: 100px;
+            height: 300px;
+            border-radius: 50px;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        #vermelho, #amarelo, #verde {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        #vermelho {
+            background-color: red;
+        }
+        #amarelo {
+            background-color: yellow;
+        }
+        #verde {
+            background-color: green;
+        }
+   </style>
+</head>
+<body>
+    
+    <div>
+        <div id="vermelho"></div>
+        <div id="amarelo"></div>
+        <div id="verde"></div>
+    </div>
+    <button id="iniciar">iniciar</button>
+
+    <script>
+        const vermelho = document.getElementById('vermelho');
+        const amarelo = document.getElementById('amarelo');
+        const verde = document.getElementById('verde');
+        const iniciar = document.getElementById('iniciar');
+
+        let estadoAtual = 'vermelho';
+
+        function mudarEstado() {
+            if (estadoAtual === 'vermelho') {
+                vermelho.style.opacity = 0.5;
+                amarelo.style.opacity = 1;
+                estadoAtual = 'amarelo';
+            } else if (estadoAtual === 'amarelo') {
+                amarelo.style.opacity = 0.5;
+                verde.style.opacity = 1;
+                estadoAtual = 'verde';
+            } else {
+                verde.style.opacity = 0.5;
+                vermelho.style.opacity = 1;
+                estadoAtual = 'vermelho';
+            }
+        }
+
+        iniciar.addEventListener('click', () => {
+            setInterval(mudarEstado, 2000);
+        });
+    </script>
+
+</body>
+</html>
