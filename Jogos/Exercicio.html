@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício final</title>
+</head>
+<body>
+    
+    <h1>Finalização da Lógica com JavaScript!</h1>
+    <div>
+
+        <button id="tabuada">Tabuada</button>
+        <button id="contador">Contador</button>
+        <button id="idade">Classificar idade</button>
+        
+    </div>
+    <p id="id"></p>
+    <div id="ex1">
+        <h3>Tabuada</h3>
+        <input type="number" id="numeroTabuada" placeholder="Digite um número">
+        <button id="adicionarNumero">Gerar</button>
+    </div>
+    <div id="ex2"></div>
+    <div id="ex3"></div>
+    <script>
+        
+        function mostratExercicio(id){
+        const ex1 = document.getElementById("ex1");
+        const ex2 = document.getElementById("ex2");
+        const ex3 = document.getElementById("ex3");
+
+        ex1.style.display = "none";
+        ex2.style.display = "none";
+        ex1.style.display = "none";
+
+        document.getElementById(id).style.display = "block"
+       }
+
+        let tabuada = document.getElementById("tabuada").addEventListener("click", ()=> mostratExercicio("ex1"))
+        let localInput = document.getElementById("localInput").addEventListener("")
+        let contador = document.getElementById("contador").addEventListener("")
+        let idade = document.getElementById("idade").addEventListener("")
+
+        
+        let receberNumero = document.getElementById("adicionarNumero").addEventListener("click", function(){
+            for ( let i = 1; i <=10; i++){
+            receberNumero = (`${tabuada} x ${i} = ${tabuada * i}`)
+              }
+              document.getElementById("id").textContent = receberNumero
+        })
+        
+        
+
+    </script>
+
+
+
+
+</body>
+</html>
